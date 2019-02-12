@@ -7,20 +7,16 @@ import { Person } from './components/Person';
 
 class AppComponent extends React.Component {
     render() {
-        var p1 = {
+        var p = {
             name: "Hossam",
             age: 22,
             friends: ["Ismail", "Ayman"]
         };
-        var p2 = {
-            name: "Ismail",
-            age: 24,
-            friends: ["Hossam", "Ayman"]
-        };
         return(
             <div>
-              <Person personObj={ p1 }/>
-              <Person personObj={ p2 }/>
+              <Person personObj={ p }>
+              Hello
+              </Person>
             </div>
         );
     }

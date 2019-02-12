@@ -5,10 +5,11 @@ export class Person extends React.Component {
         let name = this.props.personObj.name;
         let age = this.props.personObj.age;
         let friends = this.props.personObj.friends;
+        let welcome = this.props.children
         return(
             <div>
               <h2>Person</h2>
-              <p>Name: { name }</p>
+              <p>{ welcome } { name }</p>
               <p>age: { age }</p>
               <h4>Friends</h4>
               <ul>
@@ -18,7 +19,3 @@ export class Person extends React.Component {
         );
     }
 }
-
-Person.propTypes = {
-    personObj: React.PropTypes.object
-};
