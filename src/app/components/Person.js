@@ -18,3 +18,7 @@ export class Person extends React.Component {
         );
     }
 }
+
+Person.propTypes = {
+    personObj: React.PropTypes.object
+};
