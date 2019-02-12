@@ -6,9 +6,12 @@ import { Header } from './components/Header';
 
 class AppComponent extends React.Component {
     render() {
-        return (
-            <h1>Square root of 25 = { Math.sqrt(25) }</h1>
-        );
+      let x = 5;
+      return (
+          <div>
+            <h1>{ 0 > 0 ? "x is positive": "x is negative" }</h1>
+          </div>
+      );
     }
 }
 
