@@ -7,14 +7,7 @@ import { Header } from './components/Header';
 class AppComponent extends React.Component {
     render() {
         return (
-          <div>
-            <div>
-              <Home/>
-            </div>
-            <div>
-              <Header/>
-            </div>
-          </div>
+            <h1>Square root of 25 = { Math.sqrt(25) }</h1>
         );
     }
 }
