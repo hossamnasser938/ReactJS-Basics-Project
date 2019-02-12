@@ -9,11 +9,13 @@ class AppComponent extends React.Component {
     render() {
         var p1 = {
             name: "Hossam",
-            age: 22
+            age: 22,
+            friends: ["Ismail", "Ayman"]
         };
         var p2 = {
             name: "Ismail",
-            age: 24
+            age: 24,
+            friends: ["Hossam", "Ayman"]
         };
         return(
             <div>
