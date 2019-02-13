@@ -7,6 +7,9 @@ import { Person } from './components/Person';
 import { Counter } from './components/Counter';
 
 class AppComponent extends React.Component {
+    welcomePerson( welcomeMessage, personName ) {
+        alert( welcomeMessage + personName );
+    }
     render() {
         let p = {
             name: "Hossam",
@@ -15,9 +18,7 @@ class AppComponent extends React.Component {
         };
         return (
             <div>
-              <Person personObj={ p }>
-                Hello
-              </Person>
+              <Person personObj={ p } welcomeFun={ this.welcomePerson }/>
             </div>
         );
     }
