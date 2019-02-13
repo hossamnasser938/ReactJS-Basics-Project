@@ -32,7 +32,7 @@ class AppComponent extends React.Component {
                 <h1>{ this.state.appName }</h1>
               </div>
               <div>
-                <Person personObj={ p } changeAppNameFun={ this.changeAppName.bind( this ) }/>
+                <Person personObj={ p } initialAppName={ this.state.appName } changeAppNameFun={ this.changeAppName.bind( this ) }/>
               </div>
             </div>
         );
