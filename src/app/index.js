@@ -8,9 +8,16 @@ import { Counter } from './components/Counter';
 
 class AppComponent extends React.Component {
     render() {
+        let p = {
+            name: "Hossam",
+            age: 22,
+            friends: ["Ismail", "Ayman"]
+        };
         return (
             <div>
-              <Counter count={ 0 }/>
+              <Person personObj={ p }>
+                Hello
+              </Person>
             </div>
         );
     }
