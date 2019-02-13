@@ -7,9 +7,19 @@ import { Person } from './components/Person';
 import { Counter } from './components/Counter';
 
 class AppComponent extends React.Component {
-    welcomePerson( welcomeMessage, personName ) {
-        alert( welcomeMessage + personName );
+    constructor() {
+        super();
+        this.state = {
+            appName: "General App"
+        };
     }
+
+    changeAppName( newName ) {
+        this.setState( {
+            appName: newName
+        } );
+    }
+
     render() {
         let p = {
             name: "Hossam",
@@ -18,7 +28,12 @@ class AppComponent extends React.Component {
         };
         return (
             <div>
-              <Person personObj={ p } welcomeFun={ this.welcomePerson }/>
+              <div>
+                <h1>{ this.state.appName }</h1>
+              </div>
+              <div>
+                <Person personObj={ p } changeAppNameFun={ this.changeAppName.bind( this ) }/>
+              </div>
             </div>
         );
     }

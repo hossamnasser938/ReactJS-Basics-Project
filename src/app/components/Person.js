@@ -4,8 +4,8 @@ export const Person = ( props ) => {
     let name = props.personObj.name;
     let age = props.personObj.age;
     let friends = props.personObj.friends;
-    let welcomeMessage = "Welcome on Board ";
-    let welcomeFun = props.welcomeFun;
+    let appName = "People App";
+    let changeAppNameFun = props.changeAppNameFun;
 
     return(
         <div>
@@ -16,7 +16,7 @@ export const Person = ( props ) => {
           <ul>
             { friends.map( (friend, i) => <li key={ i }>{ friend }</li> ) }
           </ul>
-          <button onClick={ () => welcomeFun( welcomeMessage, name ) }>Welcome me</button>
+          <button onClick={ () => changeAppNameFun( appName ) }>Change App Name</button>
         </div>
     );
 }
